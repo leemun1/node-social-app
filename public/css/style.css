@@ -11,6 +11,10 @@ body {
 
 }
 
+.footer {
+  padding: 3rem 1.5rem;
+}
+
 .site-logo {
   font-family: 'Permanent Marker', cursive;
 }
@@ -20,3 +24,6 @@ body {
   background-size: cover;
 }
 
+form {
+  padding: 3rem;
+}

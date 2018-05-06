@@ -1,1 +1,45 @@
-<h1>add story</h1>
+<div class="container">
+  <form action="">
+    <h1 class="title">Add a New Story</h1>
+    <div class="field">
+      <label class="label">Title</label>
+      <div class="control">
+        <input class="input" type="text" name="title" placeholder="Title">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Status</label>
+      <div class="control">
+        <div class="select">
+          <select name="status">
+            <option value="public" selected>Public</option>
+            <option value="draft">Draft</option>
+            <option value="private">Private</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">What's on your mind today?</label>
+      <div class="control">
+        <textarea class="textarea" name="body" placeholder="What's on your mind today?"></textarea>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="checkbox">
+          <input type="checkbox" name="allowComments" checked> Allow comments
+        </label>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <input type="submit" value="Save" class="button is-link">
+      </div>
+    </div>
+  </form>
+</div>
