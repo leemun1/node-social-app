@@ -2,21 +2,12 @@
   <div class="container">
     <h1 class="title">Hi, welcome to Indigo.</h1>
     <h2 class="subtitle">Read, write, and share your stories. Indigo is your social diary.</h2>
-    {{#if user}}
-    <a class="button" href="/">
+    <a class="button" {{#if user}}href="/stories/add"{{else}}href="/auth/google"{{/if}}>
       <span class="icon">
         <i class="fas fa-pencil-alt"></i>
       </span>
       <span>What's on your mind today?</span>
     </a>
-    {{else}}
-    <a class="button" href="/auth/google">
-      <span class="icon">
-        <i class="fab fa-google"></i>
-      </span>
-      <span>Login With Google</span>
-    </a>
-    {{/if}}
   </div>
 </section>
 
