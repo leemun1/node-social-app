@@ -13,7 +13,7 @@ module.exports = (passport) => {
     }, (accessToken, refreshToken, profile, done) => {
 
       const image = profile.photos[0].value.substring(0, profile.photos[0].value.indexOf('?'));
-
+      
       User.findOne({
         googleID: profile.id
       })
@@ -27,8 +27,8 @@ module.exports = (passport) => {
             const newUser = {
               googleID: profile.id,
               email: profile.emails[0].value,
-              firstName: profile.givenName,
-              lastName: profile.familyName,
+              firstName: profile.name.givenName,
+              lastName: profile.name.familyName,
               image
             }
 
