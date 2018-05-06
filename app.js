@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const { mongoose } = require('./db/mongoose');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
@@ -19,6 +20,8 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
+// Static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Passport config
 require('./config/passport')(passport);

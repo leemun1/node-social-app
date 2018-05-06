@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(216, 216, 216, 0.521);
+  padding: 0 0.3rem;
+
+}
+
+.site-logo {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.main-section {
+  background: url('https://images.unsplash.com/photo-1482440308425-276ad0f28b19?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=95f938199a2d20d027c2e16195089412&auto=format&fit=crop&w=2250&q=80') no-repeat center center fixed;
+  background-size: cover;
+}
+

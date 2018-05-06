@@ -1,17 +1,50 @@
-<nav class="grey darken-3">
-  <div class="container">
-    <div class="nav-wrapper">
-      <a href="/stories" class="brand-logo center">Indigo</a>
-      <a href="#" data-activates="main-menu" class="button-collapse show-on-large"><i class="fa fa-bars"></i></a>
-      <!-- Right Nav -->
-      <ul class="right">
-        {{#if user}}
-          <li><a href="/dashboard">Welcome {{user.firstName}}</a></li>
-          <li><a href="/auth/logout"><i class="fa fa-sign-out"></i>Logout</a></li>
-        {{else}}
-          <li><a href="/stories"><i class="fa fa-book"></i>Public Stories</a></li>
-        {{/if}}
-      </ul>
+<div class="container">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item site-logo" href="/">
+        <img src="/img/logo.png" alt="indigo" width="112" height="28">
+      </a>
     </div>
-  </div>
-</nav>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="button is-info is-outlined" href="/stories">
+                <span>Public Stories</span>
+              </a>
+            </p>
+            {{#if user}}
+            <p class="control">
+              <a class="button is-info" href="/dashboard">
+                <span>
+                  Welcome, {{user.firstName}}!
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a class="button" href="/auth/logout">
+                <span class="icon">
+                  <i class="fas fa-sign-out-alt"></i>
+                </span>
+                <span>Logout</span>
+              </a>
+            </p>
+            {{else}}
+            <p class="control">
+              <a class="button" href="/auth/google">
+                <span class="icon">
+                  <i class="fas fa-sign-in-alt"></i>
+                </span>
+                <span>Login</span>
+              </a>
+            </p>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
