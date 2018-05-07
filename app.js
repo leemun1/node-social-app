@@ -21,14 +21,16 @@ const stories = require('./routes/stories');
 // Handlebars Helpers
 const {
   truncate,
-  stripTags
+  stripTags,
+  formatDate
 } = require('./helpers/hbs');
 
 // Handlebars Middleware
 app.engine('handlebars', exphbs({
   helpers: {
     truncate,
-    stripTags
+    stripTags,
+    formatDate
   },
   defaultLayout: 'main'
 }));
