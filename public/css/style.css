@@ -5,10 +5,20 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
+#story-status {
+  text-transform: capitalize;
+  padding: 0 0.3rem;
+}
+
+.story-meta {
+  font-size: 1.1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
 .navbar {
   border-bottom: 1px solid rgba(216, 216, 216, 0.521);
   padding: 0 0.3rem;
-
 }
 
 .footer {
@@ -31,6 +41,10 @@ body {
 .main-section {
   background: url('https://images.unsplash.com/photo-1482440308425-276ad0f28b19?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=95f938199a2d20d027c2e16195089412&auto=format&fit=crop&w=2250&q=80') no-repeat center center fixed;
   background-size: cover;
+}
+
+.story-container {
+  padding: 2rem 4rem;
 }
 
 form {

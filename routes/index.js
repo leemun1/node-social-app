@@ -7,7 +7,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/dashboard', authenticate, (req, res) => {
-  console.log(req.isAuthenticated());
   res.render('index/dashboard');
 });
 

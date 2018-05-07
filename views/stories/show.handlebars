@@ -1,1 +1,39 @@
-<h1>show story</h1>
+<div class="container story-container">
+  <div class="columns is-centered">
+    <div class="column is-two-thirds">
+      <h1 class="title is-size-2">{{story.title}}</h1>
+
+      <p class="story-meta">
+        <span>{{formatDate story.date}}</span>
+        <span id="story-status"><i class="fas fa-eye"></i> {{story.status}}</span>
+      </p>
+
+      <p id="story-body" class="is-size-6">{{stripTags story.body}}</p>
+
+      <hr>
+
+      <article class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <figure class="image is-48x48">
+              <img class="user-img" src="{{story.user.image}}" alt="Placeholder image">
+            </figure>
+          </div>
+
+          <div class="level-item">
+            <h1 class="is-size-4">{{story.user.firstName}} {{story.user.lastName}}</h1>
+          </div>
+        </div>
+
+        <div class="level-right">
+          <div class="level-item">
+            <button class="button is-info is-outlined">More from this user</button>
+          </div>
+        </div>
+      </article>
+
+      <hr>
+
+    </div>
+  </div>
+</div>

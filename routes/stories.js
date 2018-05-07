@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { authenticate } = require('../helpers/auth');
 const { Story } = require('../models/Story');
+const moment = require('../public/js/lib/moment');
 
 // Stories Index
 router.get('/', (req, res) => {
@@ -9,6 +10,15 @@ router.get('/', (req, res) => {
     .populate('user')
     .then(stories => {
       res.render('stories/index', {stories})
+    });
+});
+
+// Show single story
+router.get('/show/:id', (req, res) => {
+  Story.findOne({_id: req.params.id})
+    .populate('user')
+    .then(story => {
+      res.render('stories/show', {story});
     });
 });
 
