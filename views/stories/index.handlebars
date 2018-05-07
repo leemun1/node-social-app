@@ -25,14 +25,14 @@
               </div>
               <div class="media-content">
                 <a href="/stories/show/{{id}}">
-                  <p class="title is-4">{{title}}</p>
+                  <p class="title is-4">{{truncate title 50}}</p>
                 </a>
                 <p class="subtitle is-6">{{user.firstName}} {{user.lastName}}</p>
               </div>
             </div>
 
             <div class="content">
-              {{body}}
+              {{stripTags (truncate body 200)}}
               <br>
               <span>{{date}}</span>
             </div>

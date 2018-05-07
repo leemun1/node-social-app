@@ -18,10 +18,18 @@ const index = require('./routes/index');
 const auth = require('./routes/auth');
 const stories = require('./routes/stories');
 
-const port = process.env.PORT || 3000;
+// Handlebars Helpers
+const {
+  truncate,
+  stripTags
+} = require('./helpers/hbs');
 
 // Handlebars Middleware
 app.engine('handlebars', exphbs({
+  helpers: {
+    truncate,
+    stripTags
+  },
   defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
@@ -53,6 +61,8 @@ app.use((req, res, next) => {
 app.use('/', index);
 app.use('/auth', auth);
 app.use('/stories', stories);
+
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
